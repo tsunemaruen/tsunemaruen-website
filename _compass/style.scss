@@ -1,0 +1,65 @@
+$TitleFont: "myriad-pro", "source-han-sans-japanese", sans-serif;
+$TextFont: "a-otf-gothic-bbb-pr6n", sans-serif;
+
+@mixin font-size($size) {
+  font-size: $size + px;
+  font-size: ($size / 10) * 1rem;
+}
+
+html {
+    font-size: 62.5%
+}
+
+@media (min-width: 960px) {
+    html {
+        font-size: 80%
+    }
+}
+
+h1, h2, h3, h4, h6, h5, h6 {
+    font-family: $TitleFont;
+}
+
+header {
+    padding-top: 5em;
+    text-align: center;
+}
+
+main {
+    padding-top: 5em;
+    text-align: center;
+}
+
+.header__title {
+    margin: 0;
+    font-weight: 200;
+    @include font-size(50);
+    line-height: 1;
+}
+
+.header__description {
+    margin: 0;
+    padding-top: 0.3em;
+    font-weight: 300;
+    @include font-size(30);
+    line-height: 1;
+    font-family: $TitleFont
+}
+
+.main__title {
+    margin: 0;
+    font-weight: 500;
+    @include font-size(30);
+    line-height: 1;
+}
+
+.main__description {
+    margin: 0 auto;
+    padding-top: 2em;
+    width: 21em;
+    font-weight: 300;
+    @include font-size(14);
+    text-align: left;
+    line-height: 1.5;
+    font-family: $TextFont;
+}
